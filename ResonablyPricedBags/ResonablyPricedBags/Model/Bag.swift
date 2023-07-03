@@ -16,6 +16,7 @@ struct Bag {
     let originLocation: String
     let gender: String
     let uuid: String = UUID().uuidString
+    let collectionType: String = "Bags"
     
     // Setting the data - Writing
     var bagDictionaryReprentation: [String: AnyHashable] {
@@ -24,6 +25,7 @@ struct Bag {
          "season" : self.season,
          "origin" : self.originLocation,
          "gender" : self.gender,
+         "collectionType" : self.collectionType,
          "uuid" : self.uuid]
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class BagDetailViewController: UIViewController {
 
@@ -17,9 +18,12 @@ class BagDetailViewController: UIViewController {
     @IBOutlet weak var bagGenderTextField: UITextField!
     @IBOutlet weak var saveBagButton: UIButton!
     
+    // Property
+    var viewModel: BagDetailViewModel! // implecently unwrapping
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel = BagDetailViewModel()
         // Do any additional setup after loading the view.
     }
     
@@ -27,7 +31,16 @@ class BagDetailViewController: UIViewController {
     // MARK: -  Actions
     @IBAction func addBagTapped(_ sender: Any) {
         
+        // Reading
+        guard let name = bagNameTextField.text,
+        let price = bagPriceTextField.text,
+        let season = bagSeasonTextField.text,
+        let origin = bagOriginTextField.text,
+        let gender = bagGenderTextField.text else {return}
+        // Nil-Coalecing to unwrap the double
+        let priceAsDouble = Double(price) ?? 0.0
+        // Display
+        viewModel.create(name: name, price: priceAsDouble, season: season, origin: origin, gender: gender)
     }
     
-  
 } // End of the VC

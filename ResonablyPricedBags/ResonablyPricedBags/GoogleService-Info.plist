@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>224451409659-spbi5o0sab3loji8461uolb0ep2ce43r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.224451409659-spbi5o0sab3loji8461uolb0ep2ce43r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDs_kNjwFFWEuhkl3FEfEI0U56KggOpN00</string>
+	<key>GCM_SENDER_ID</key>
+	<string>224451409659</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Stateful.ResponablyPricedBags</string>
+	<key>PROJECT_ID</key>
+	<string>resonablypricedbags</string>
+	<key>STORAGE_BUCKET</key>
+	<string>resonablypricedbags.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:224451409659:ios:efc5f34c3c32c2da90625e</string>
+</dict>
+</plist>

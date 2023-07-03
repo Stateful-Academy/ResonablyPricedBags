@@ -12,6 +12,8 @@
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
 		41DE87DC2A5328AD00283F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DB2A5328AD00283F84 /* Assets.xcassets */; };
 		41DE87DF2A5328AD00283F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */; };
+		41DE87EC2A53340000283F84 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 41DE87EB2A53340000283F84 /* FirebaseFirestore */; };
+		41DE87EE2A53378C00283F84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		41DE87DB2A5328AD00283F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41DE87DE2A5328AD00283F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41DE87E02A5328AD00283F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DE87EC2A53340000283F84 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 		41DE87D12A5328AA00283F84 /* ResonablyPricedBags */ = {
 			isa = PBXGroup;
 			children = (
+				41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */,
 				41DE87E62A53299700283F84 /* SupportingFiles */,
 				41DE87D82A5328AA00283F84 /* Main.storyboard */,
 				41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */,
@@ -88,6 +93,9 @@
 			dependencies = (
 			);
 			name = ResonablyPricedBags;
+			packageProductDependencies = (
+				41DE87EB2A53340000283F84 /* FirebaseFirestore */,
+			);
 			productName = ResonablyPricedBags;
 			productReference = 41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 41DE87C62A5328AA00283F84;
+			packageReferences = (
+				41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 41DE87D02A5328AA00283F84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41DE87DF2A5328AD00283F84 /* LaunchScreen.storyboard in Resources */,
+				41DE87EE2A53378C00283F84 /* GoogleService-Info.plist in Resources */,
 				41DE87DC2A5328AD00283F84 /* Assets.xcassets in Resources */,
 				41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */,
 			);
@@ -364,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41DE87EB2A53340000283F84 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 41DE87C72A5328AA00283F84 /* Project object */;
 }

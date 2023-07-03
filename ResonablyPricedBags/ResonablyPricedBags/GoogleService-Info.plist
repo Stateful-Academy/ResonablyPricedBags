@@ -13,21 +13,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Stateful.ResponablyPricedBags</string>
+	<string>Stateful.ResonablyPricedBags</string>
 	<key>PROJECT_ID</key>
 	<string>resonablypricedbags</string>
 	<key>STORAGE_BUCKET</key>
 	<string>resonablypricedbags.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:224451409659:ios:efc5f34c3c32c2da90625e</string>
 </dict>

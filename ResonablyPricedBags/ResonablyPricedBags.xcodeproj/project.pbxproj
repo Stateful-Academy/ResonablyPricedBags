@@ -14,6 +14,8 @@
 		41DE87DF2A5328AD00283F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */; };
 		41DE87EC2A53340000283F84 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 41DE87EB2A53340000283F84 /* FirebaseFirestore */; };
 		41DE87EE2A53378C00283F84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */; };
+		41DE87F02A533D3800283F84 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87EF2A533D3800283F84 /* Bag.swift */; };
+		41DE87F32A5343F800283F84 /* BagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87F22A5343F800283F84 /* BagDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		41DE87DE2A5328AD00283F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41DE87E02A5328AD00283F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41DE87EF2A533D3800283F84 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		41DE87F22A5343F800283F84 /* BagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				41DE87E62A53299700283F84 /* SupportingFiles */,
 				41DE87D82A5328AA00283F84 /* Main.storyboard */,
 				41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */,
+				41DE87F12A5341C500283F84 /* Model */,
+				41DE87F42A5343FE00283F84 /* UI */,
 			);
 			path = ResonablyPricedBags;
 			sourceTree = "<group>";
@@ -75,6 +81,22 @@
 				41DE87E02A5328AD00283F84 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		41DE87F12A5341C500283F84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41DE87EF2A533D3800283F84 /* Bag.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41DE87F42A5343FE00283F84 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				41DE87F22A5343F800283F84 /* BagDetailViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DE87F32A5343F800283F84 /* BagDetailViewController.swift in Sources */,
 				41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */,
+				41DE87F02A533D3800283F84 /* Bag.swift in Sources */,
 				41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

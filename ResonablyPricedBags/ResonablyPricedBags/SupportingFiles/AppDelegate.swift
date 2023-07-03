@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        let db = Firestore.firestore()
+        
+        let bag = Bag(name: "DC Strap", price: 28608.10, season: "2023", originLocation: "India", gender: "Male")
+        db.collection("bags").document(bag.uuid).setData(bag.bagDictionaryReprentation)
+       
         return true
     }
 

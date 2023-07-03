@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D22A5328AA00283F84 /* AppDelegate.swift */; };
 		41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D42A5328AA00283F84 /* SceneDelegate.swift */; };
-		41DE87D72A5328AA00283F84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D62A5328AA00283F84 /* ViewController.swift */; };
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
 		41DE87DC2A5328AD00283F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DB2A5328AD00283F84 /* Assets.xcassets */; };
 		41DE87DF2A5328AD00283F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResonablyPricedBags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DE87D22A5328AA00283F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DE87D42A5328AA00283F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41DE87D62A5328AA00283F84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41DE87D92A5328AA00283F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41DE87DB2A5328AD00283F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41DE87DE2A5328AD00283F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,22 @@
 		41DE87D12A5328AA00283F84 /* ResonablyPricedBags */ = {
 			isa = PBXGroup;
 			children = (
-				41DE87D22A5328AA00283F84 /* AppDelegate.swift */,
-				41DE87D42A5328AA00283F84 /* SceneDelegate.swift */,
-				41DE87D62A5328AA00283F84 /* ViewController.swift */,
+				41DE87E62A53299700283F84 /* SupportingFiles */,
 				41DE87D82A5328AA00283F84 /* Main.storyboard */,
-				41DE87DB2A5328AD00283F84 /* Assets.xcassets */,
 				41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */,
-				41DE87E02A5328AD00283F84 /* Info.plist */,
 			);
 			path = ResonablyPricedBags;
+			sourceTree = "<group>";
+		};
+		41DE87E62A53299700283F84 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				41DE87D22A5328AA00283F84 /* AppDelegate.swift */,
+				41DE87D42A5328AA00283F84 /* SceneDelegate.swift */,
+				41DE87DB2A5328AD00283F84 /* Assets.xcassets */,
+				41DE87E02A5328AD00283F84 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41DE87D72A5328AA00283F84 /* ViewController.swift in Sources */,
 				41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */,
 				41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ResonablyPricedBags/Info.plist;
+				INFOPLIST_FILE = ResonablyPricedBags/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ResonablyPricedBags/Info.plist;
+				INFOPLIST_FILE = ResonablyPricedBags/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

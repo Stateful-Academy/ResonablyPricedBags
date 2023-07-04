@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4121FA482A545A46008FF54D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4121FA472A545A46008FF54D /* FirebaseFirestoreSwift */; };
+		4121FA4A2A545D64008FF54D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4121FA492A545D64008FF54D /* FirebaseFirestore */; };
 		41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D22A5328AA00283F84 /* AppDelegate.swift */; };
 		41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D42A5328AA00283F84 /* SceneDelegate.swift */; };
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
 		41DE87DC2A5328AD00283F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DB2A5328AD00283F84 /* Assets.xcassets */; };
 		41DE87DF2A5328AD00283F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87DD2A5328AD00283F84 /* LaunchScreen.storyboard */; };
-		41DE87EC2A53340000283F84 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 41DE87EB2A53340000283F84 /* FirebaseFirestore */; };
 		41DE87EE2A53378C00283F84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87ED2A53378C00283F84 /* GoogleService-Info.plist */; };
 		41DE87F02A533D3800283F84 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87EF2A533D3800283F84 /* Bag.swift */; };
 		41DE87F32A5343F800283F84 /* BagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87F22A5343F800283F84 /* BagDetailViewController.swift */; };
@@ -38,18 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41DE87EC2A53340000283F84 /* FirebaseFirestore in Frameworks */,
+				4121FA482A545A46008FF54D /* FirebaseFirestoreSwift in Frameworks */,
+				4121FA4A2A545D64008FF54D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4121FA462A545A46008FF54D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41DE87C62A5328AA00283F84 = {
 			isa = PBXGroup;
 			children = (
 				41DE87D12A5328AA00283F84 /* ResonablyPricedBags */,
 				41DE87D02A5328AA00283F84 /* Products */,
+				4121FA462A545A46008FF54D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +129,8 @@
 			);
 			name = ResonablyPricedBags;
 			packageProductDependencies = (
-				41DE87EB2A53340000283F84 /* FirebaseFirestore */,
+				4121FA472A545A46008FF54D /* FirebaseFirestoreSwift */,
+				4121FA492A545D64008FF54D /* FirebaseFirestore */,
 			);
 			productName = ResonablyPricedBags;
 			productReference = 41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */;
@@ -417,7 +428,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		41DE87EB2A53340000283F84 /* FirebaseFirestore */ = {
+		4121FA472A545A46008FF54D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		4121FA492A545D64008FF54D /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;

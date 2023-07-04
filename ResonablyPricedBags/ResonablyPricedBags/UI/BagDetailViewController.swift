@@ -24,6 +24,7 @@ class BagDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = BagDetailViewModel()
+        viewModel.fetchAllBags() // This is to test -- delete me
         // Do any additional setup after loading the view.
     }
     

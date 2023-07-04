@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4121FA482A545A46008FF54D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4121FA472A545A46008FF54D /* FirebaseFirestoreSwift */; };
 		4121FA4A2A545D64008FF54D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4121FA492A545D64008FF54D /* FirebaseFirestore */; };
+		4121FA4C2A548EEF008FF54D /* BagListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */; };
+		4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */; };
 		41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D22A5328AA00283F84 /* AppDelegate.swift */; };
 		41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D42A5328AA00283F84 /* SceneDelegate.swift */; };
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewController.swift; sourceTree = "<group>"; };
+		4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableViewCell.swift; sourceTree = "<group>"; };
 		41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResonablyPricedBags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DE87D22A5328AA00283F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DE87D42A5328AA00283F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				41DE87F22A5343F800283F84 /* BagDetailViewController.swift */,
 				41DE87F52A534A5300283F84 /* BagDetailViewModel.swift */,
+				4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */,
+				4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -191,9 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4121FA4C2A548EEF008FF54D /* BagListTableViewController.swift in Sources */,
 				41DE87F62A534A5300283F84 /* BagDetailViewModel.swift in Sources */,
 				41DE87F32A5343F800283F84 /* BagDetailViewController.swift in Sources */,
 				41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */,
+				4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */,
 				41DE87F02A533D3800283F84 /* Bag.swift in Sources */,
 				41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */,
 			);

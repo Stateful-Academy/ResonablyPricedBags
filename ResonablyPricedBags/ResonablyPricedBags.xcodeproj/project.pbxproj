@@ -12,6 +12,9 @@
 		4121FA4C2A548EEF008FF54D /* BagListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */; };
 		4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */; };
 		4121FA522A549101008FF54D /* BagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA512A549101008FF54D /* BagListViewModel.swift */; };
+		4175235B2A55B95D0081D4C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175235A2A55B95D0081D4C7 /* Constants.swift */; };
+		4175235D2A55CE800081D4C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4175235C2A55CE800081D4C7 /* FirebaseStorage */; };
+		4175235F2A55DB1D0081D4C7 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175235E2A55DB1D0081D4C7 /* FirebaseError.swift */; };
 		41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D22A5328AA00283F84 /* AppDelegate.swift */; };
 		41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D42A5328AA00283F84 /* SceneDelegate.swift */; };
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
@@ -27,6 +30,8 @@
 		4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewController.swift; sourceTree = "<group>"; };
 		4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableViewCell.swift; sourceTree = "<group>"; };
 		4121FA512A549101008FF54D /* BagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewModel.swift; sourceTree = "<group>"; };
+		4175235A2A55B95D0081D4C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4175235E2A55DB1D0081D4C7 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResonablyPricedBags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DE87D22A5328AA00283F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DE87D42A5328AA00283F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 			files = (
 				4121FA482A545A46008FF54D /* FirebaseFirestoreSwift in Frameworks */,
 				4121FA4A2A545D64008FF54D /* FirebaseFirestore in Frameworks */,
+				4175235D2A55CE800081D4C7 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,8 @@
 				41DE87D42A5328AA00283F84 /* SceneDelegate.swift */,
 				41DE87DB2A5328AD00283F84 /* Assets.xcassets */,
 				41DE87E02A5328AD00283F84 /* Info.plist */,
+				4175235A2A55B95D0081D4C7 /* Constants.swift */,
+				4175235E2A55DB1D0081D4C7 /* FirebaseError.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			packageProductDependencies = (
 				4121FA472A545A46008FF54D /* FirebaseFirestoreSwift */,
 				4121FA492A545D64008FF54D /* FirebaseFirestore */,
+				4175235C2A55CE800081D4C7 /* FirebaseStorage */,
 			);
 			productName = ResonablyPricedBags;
 			productReference = 41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */;
@@ -224,6 +233,8 @@
 				4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */,
 				41DE87F02A533D3800283F84 /* Bag.swift in Sources */,
 				41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */,
+				4175235B2A55B95D0081D4C7 /* Constants.swift in Sources */,
+				4175235F2A55DB1D0081D4C7 /* FirebaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +476,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		4175235C2A55CE800081D4C7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41DE87EA2A53340000283F84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

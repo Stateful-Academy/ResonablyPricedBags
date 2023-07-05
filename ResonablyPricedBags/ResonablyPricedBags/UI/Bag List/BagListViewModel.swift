@@ -27,7 +27,7 @@ class BagListViewModel {
     // Fetch all the bags
     func fetchAllBags() {
         let db = Firestore.firestore()
-        db.collection("bags").getDocuments { snapshot, error in
+        db.collection(Constants.Bags.bagsCollectionPath).getDocuments { snapshot, error in
             guard let documents = snapshot?.documents else {return}
             do {
                 let bagsArray = try documents.compactMap({ try $0.data(as: Bag.self)})

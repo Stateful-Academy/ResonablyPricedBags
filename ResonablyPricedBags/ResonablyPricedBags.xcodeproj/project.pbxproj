@@ -11,6 +11,7 @@
 		4121FA4A2A545D64008FF54D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4121FA492A545D64008FF54D /* FirebaseFirestore */; };
 		4121FA4C2A548EEF008FF54D /* BagListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */; };
 		4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */; };
+		4121FA522A549101008FF54D /* BagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121FA512A549101008FF54D /* BagListViewModel.swift */; };
 		41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D22A5328AA00283F84 /* AppDelegate.swift */; };
 		41DE87D52A5328AA00283F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE87D42A5328AA00283F84 /* SceneDelegate.swift */; };
 		41DE87DA2A5328AA00283F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DE87D82A5328AA00283F84 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewController.swift; sourceTree = "<group>"; };
 		4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableViewCell.swift; sourceTree = "<group>"; };
+		4121FA512A549101008FF54D /* BagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewModel.swift; sourceTree = "<group>"; };
 		41DE87CF2A5328AA00283F84 /* ResonablyPricedBags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResonablyPricedBags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DE87D22A5328AA00283F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DE87D42A5328AA00283F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4121FA4F2A54904D008FF54D /* Bag List */ = {
+			isa = PBXGroup;
+			children = (
+				4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */,
+				4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */,
+				4121FA512A549101008FF54D /* BagListViewModel.swift */,
+			);
+			path = "Bag List";
+			sourceTree = "<group>";
+		};
+		4121FA502A54905C008FF54D /* Bag Detail */ = {
+			isa = PBXGroup;
+			children = (
+				41DE87F22A5343F800283F84 /* BagDetailViewController.swift */,
+				41DE87F52A534A5300283F84 /* BagDetailViewModel.swift */,
+			);
+			path = "Bag Detail";
 			sourceTree = "<group>";
 		};
 		41DE87C62A5328AA00283F84 = {
@@ -110,10 +131,8 @@
 		41DE87F42A5343FE00283F84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				41DE87F22A5343F800283F84 /* BagDetailViewController.swift */,
-				41DE87F52A534A5300283F84 /* BagDetailViewModel.swift */,
-				4121FA4B2A548EEF008FF54D /* BagListTableViewController.swift */,
-				4121FA4D2A548F21008FF54D /* BagTableViewCell.swift */,
+				4121FA502A54905C008FF54D /* Bag Detail */,
+				4121FA4F2A54904D008FF54D /* Bag List */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -200,6 +219,7 @@
 				4121FA4C2A548EEF008FF54D /* BagListTableViewController.swift in Sources */,
 				41DE87F62A534A5300283F84 /* BagDetailViewModel.swift in Sources */,
 				41DE87F32A5343F800283F84 /* BagDetailViewController.swift in Sources */,
+				4121FA522A549101008FF54D /* BagListViewModel.swift in Sources */,
 				41DE87D32A5328AA00283F84 /* AppDelegate.swift in Sources */,
 				4121FA4E2A548F21008FF54D /* BagTableViewCell.swift in Sources */,
 				41DE87F02A533D3800283F84 /* Bag.swift in Sources */,

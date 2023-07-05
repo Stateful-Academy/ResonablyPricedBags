@@ -47,6 +47,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bagGenderLabel" destination="gy0-o4-pJ9" id="vEv-RJ-Qi0"/>
+                                    <outlet property="bagNameLabel" destination="c1E-rJ-CHE" id="C9R-9U-ZEd"/>
+                                    <outlet property="bagPriceLabel" destination="3bu-4c-rSQ" id="FeH-E8-vS2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

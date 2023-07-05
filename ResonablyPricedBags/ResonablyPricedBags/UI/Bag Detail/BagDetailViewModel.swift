@@ -77,16 +77,18 @@ class BagDetailViewModel {
         guard let imageData = image.jpegData(compressionQuality: 0.1) else {return}
         // build
         let storageRef = Storage.storage().reference()
-        
-        storageRef.child(Constants.Images.imagePath).child(docID).putData(imageData) { metaData, error in
-            // Handle the Error
-            if let error {
-                print("SHHHIIIITTTTTTT the image is not working")
-                return
+        /// Use this to be able to preview the image on the Storage Console
+        let uploadMetadata = StorageMetadata()
+        uploadMetadata.contentType = "image/jpeg"
+        /// Storage Console ^^
+       
+        storageRef.child(Constants.Images.imagePath).child(docID).putData(imageData, metadata: uploadMetadata) { result in
+            switch result {
+            case .success(let metaData):
+                let imagePath = metaData.path
+            case .failure(let failure):
+                print(failure.localizedDescription)
             }
-        
-            let imagePath = metaData?.path
-            print(imagePath)
         }
     } // End of the save Image
     

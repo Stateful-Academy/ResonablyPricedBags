@@ -38,6 +38,7 @@ class BagDetailViewController: UIViewController {
         bagOriginTextField.text = bag.originLocation
         bagGenderTextField.text = bag.gender
         // TODO: - how to image?
+//        viewModel.fetchImage(with: bag.id)
         
         
     }
@@ -90,5 +91,13 @@ extension BagDetailViewController: UIImagePickerControllerDelegate, UINavigation
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
         bagDisplayImageVIew.image = image
         picker.dismiss(animated: true)
+    }
+}
+
+extension BagDetailViewController: BagDetailViewModelDelegate {
+    func imageLoadedSuccessfully() {
+        DispatchQueue.main.async {
+            self.bagDisplayImageVIew.image = self.viewModel.image
+        }
     }
 }

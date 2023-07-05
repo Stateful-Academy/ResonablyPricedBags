@@ -46,10 +46,10 @@ class BagListTableViewController: UITableViewController {
             
             let bag = viewModel.bagsSourceOfTruth?[indexPath.row]
             // in order to send the bag to the detail VC I need to inject that bag into the initialization of the bagDetailView Model
-            destination.viewModel = BagDetailViewModel(bag: bag)
+            destination.viewModel = BagDetailViewModel(bag: bag, injectedDelegate: destination)
         } else {
             // the user tapped on the plus button
-            destination.viewModel = BagDetailViewModel(bag: nil)
+            destination.viewModel = BagDetailViewModel(bag: nil, injectedDelegate: destination)
         }
     } // End of segue
     

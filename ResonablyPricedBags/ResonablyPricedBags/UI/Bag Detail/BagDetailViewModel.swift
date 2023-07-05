@@ -10,15 +10,21 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
 
-struct BagDetailViewModel {
+protocol BagDetailViewModelDelegate: BagDetailViewController {
+     func imageLoadedSuccessfully()
+}
+
+class BagDetailViewModel {
     
     var bag: Bag?
+    var image: UIImage?
+    weak var delegate: BagDetailViewModelDelegate?
     
-    init(bag: Bag?) {
+    init(bag: Bag?, injectedDelegate: BagDetailViewModelDelegate) {
         self.bag = bag
+        self.delegate = injectedDelegate
+        self.fetchImage(with: bag?.id)
     }
-    
-    
     
     func create(name: String, price: Double, season: String, origin: String, gender: String, handler: @escaping (Result<String,FirebaseError>) -> Void) {
         
@@ -82,30 +88,27 @@ struct BagDetailViewModel {
             let imagePath = metaData?.path
             print(imagePath)
         }
+    } // End of the save Image
+    
+    func fetchImage(with id: String?) {
+        // where are we trying to fetch the image from?
+        guard let id else {return}
+        let storageRef = Storage.storage().reference()
+        
+        storageRef.child(Constants.Images.imagePath).child(id).getData(maxSize: 1024 * 1024) { result in
+            switch result {
+            case .success(let imageData):
+                guard let image = UIImage(data: imageData) else {return}
+                self.image = image
+                self.delegate?.imageLoadedSuccessfully()
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
     }
-}
-
-/*
- // Data in memory
- let data = Data()
-
- // Create a reference to the file you want to upload
- let riversRef = storageRef.child("images/rivers.jpg")
-
- // Upload the file to the path "images/rivers.jpg"
- let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
-   guard let metadata = metadata else {
-     // Uh-oh, an error occurred!
-     return
-   }
-   // Metadata contains file metadata such as size, content-type.
-   let size = metadata.size
-   // You can also access to download URL after upload.
-   riversRef.downloadURL { (url, error) in
-     guard let downloadURL = url else {
-       // Uh-oh, an error occurred!
-       return
-     }
-   }
- }
- */
+    
+    
+    
+    
+    
+} // End of the class

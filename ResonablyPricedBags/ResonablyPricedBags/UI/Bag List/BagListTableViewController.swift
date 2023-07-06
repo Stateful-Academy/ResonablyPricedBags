@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BagListTableViewController: UITableViewController {
+class BagListTableViewController: UITableViewController, AlertPresentable {
     
     // MARK: - Properties
     var viewModel: BagListViewModel! // implecentlty unwrapped
@@ -40,13 +40,14 @@ class BagListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         // what editing is the user trying to do?
-        
         if editingStyle == .delete {
             // remove the object from FB
-//            let bag = viewModel.bagsSourceOfTruth?[indexPath.row]
-//            viewModel.delete(bag: bag!)
-            viewModel.delete(indexPath: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            viewModel.delete(indexPath: indexPath) {
+                // closure Prevents the row from being deleted before we can update the SOT - must be on main
+                DispatchQueue.main.async {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
         }
     }
     
@@ -67,15 +68,18 @@ class BagListTableViewController: UITableViewController {
         }
     } // End of segue
     
-    
 } // End of VC
 
 // Posting the job req
-extension BagListTableViewController: BagListViewModelDelegate {
+extension BagListTableViewController: BagListViewModelDelegate{
     // The job description
     func successfullyLoadedData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: " Oh no!")
     }
 }

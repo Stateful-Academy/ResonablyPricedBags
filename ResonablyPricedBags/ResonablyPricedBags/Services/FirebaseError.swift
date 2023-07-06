@@ -16,15 +16,15 @@ enum FirebaseError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .firebaseError(let error):
-            return "Idk man. Make this up later \(error.localizedDescription)"
+            return "\(error.localizedDescription)"
         case .failedToUnwrapData:
-            return "Idk man. Make this up later"
+            return "failed unwrap"
         case .noDataFound:
-            return "Idk man. Make this up later"
+            return "noData"
         case .invalidURL:
-            return "Idk man. Make this up later"
+            return "url"
         case .badImage:
-            return "Idk man. Make this up later"
+            return "bad image"
         }
     }
 }

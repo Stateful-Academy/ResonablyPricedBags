@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseFirestore
 
-class BagDetailViewController: UIViewController {
+class BagDetailViewController: UIViewController, AlertPresentable {
 
     // MARK: - Outlets
     @IBOutlet weak var bagNameTextField: UITextField!
@@ -28,7 +28,6 @@ class BagDetailViewController: UIViewController {
         configureView()
     }
     
-    
     // MARK: - Methods
     private func configureView() {
         guard let bag = viewModel.bag else {return}
@@ -38,8 +37,7 @@ class BagDetailViewController: UIViewController {
         bagOriginTextField.text = bag.originLocation
         bagGenderTextField.text = bag.gender
         // TODO: - how to image?
-//        viewModel.fetchImage(with: bag.id)
-        
+        viewModel.fetchImage(with: bag.id)
         
     }
     private func setUpImageView () {
@@ -52,7 +50,6 @@ class BagDetailViewController: UIViewController {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-//        imagePicker.allowsEditing = true
         // Present the image picker to the user
         present(imagePicker, animated: true)
     }
@@ -106,5 +103,8 @@ extension BagDetailViewController: BagDetailViewModelDelegate {
         DispatchQueue.main.async {
             self.bagDisplayImageVIew.image = self.viewModel.image
         }
+    }
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: " Oh no!")
     }
 }

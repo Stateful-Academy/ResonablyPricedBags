@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, AlertPresentable {
     
     // MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,7 +20,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CreateAccountViewModel()
+        viewModel = CreateAccountViewModel(delegate: self)
         // Do any additional setup after loading the view.
     }
     
@@ -41,5 +41,10 @@ class CreateAccountViewController: UIViewController {
         viewModel.signIn(with: email, password: password, confirmPassword: confirmPassword)
     } // Sign in
     
-
 } // VC
+
+extension CreateAccountViewController: CreateAccountViewModelDelegate {
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: " Oh no!")
+    }
+}

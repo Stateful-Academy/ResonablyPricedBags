@@ -22,7 +22,7 @@ class BagListViewModel {
     // DEPENDENCY INJECTION - why? To make our code easier to test.
     init(injectedDelegate: BagListViewModelDelegate) {
         self.delegate = injectedDelegate // Hiring the person
-        fetchAllBags()
+//        fetchAllBags()
     }
     // Fetch all the bags
     func fetchAllBags() {
@@ -38,5 +38,19 @@ class BagListViewModel {
                 print("oh no!", error.localizedDescription)
             }
         }
+    } // Fetch
+    
+//    func delete(bag: Bag) {
+//        let db = Firestore.firestore()
+//        db.collection(Constants.Bags.bagsCollectionPath).document(bag.id!).delete(completion: nil)
+//        let index = bagsSourceOfTruth?.index(of: bag)
+//        self.bagsSourceOfTruth?.remove(at: index!)
+//    } // Delete
+    
+    func delete(indexPath: IndexPath) {
+        guard let bag = bagsSourceOfTruth?[indexPath.row] else {return}
+        let db = Firestore.firestore()
+        db.collection(Constants.Bags.bagsCollectionPath).document(bag.id!).delete(completion: nil)
+        bagsSourceOfTruth?.remove(at: indexPath.row)
     }
-}
+} // Class

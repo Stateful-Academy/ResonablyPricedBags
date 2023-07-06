@@ -12,15 +12,21 @@ struct Bag: Codable {
    
     // Properties
     @DocumentID var id: String? // property Wrapper
-    let name: String
-    let price: Double
-    let season: String
-    let originLocation: String
-    let gender: String
-    let collectionType: String
-    let size: Size // single dict
-    let colors: [Color] // array of dict
+    var name: String
+    var price: Double
+    var season: String
+    var originLocation: String
+    var gender: String
+    var collectionType: String
+    var size: Size // single dict
+    var colors: [Color] // array of dict
 }
+
+//extension Bag: Equatable {
+//    static func == (lhs: Bag, rhs: Bag) -> Bool {
+//        return lhs._id == rhs._id
+//    }
+//}
 
 struct Size: Codable {
     var small: String

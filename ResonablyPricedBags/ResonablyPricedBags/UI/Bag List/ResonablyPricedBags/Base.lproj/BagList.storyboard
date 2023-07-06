@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAL-9a-Ehk">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bag List Table View Controller-->
+        <scene sceneID="uAQ-8B-L2W">
+            <objects>
+                <tableViewController storyboardIdentifier="BagList" id="PAL-9a-Ehk" customClass="BagListTableViewController" customModule="ResonablyPricedBags" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="teR-HK-3e4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bagCell" rowHeight="140" id="mFb-8j-PjW" customClass="BagTableViewCell" customModule="ResonablyPricedBags" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mFb-8j-PjW" id="w0r-SJ-RVy">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="76x-W1-R2z">
+                                            <rect key="frame" x="28" y="18.999999999999996" width="337" height="48.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(bag Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1E-rJ-CHE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(price)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-4c-rSQ">
+                                                    <rect key="frame" x="0.0" y="28.333333333333336" width="50.333333333333336" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-V1-p9h">
+                                            <rect key="frame" x="28" y="75.666666666666671" width="337" height="45.333333333333329"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY3-es-SSH">
+                                                    <rect key="frame" x="0.0" y="12.666666666666655" width="42.666666666666664" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXh-lh-GtZ">
+                                                    <rect key="frame" x="128.33333333333334" y="12.666666666666655" width="54.333333333333343" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Gender)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy0-o4-pJ9">
+                                                    <rect key="frame" x="268.33333333333331" y="12.666666666666655" width="68.666666666666686" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mWc-V1-p9h" secondAttribute="trailing" constant="8" id="443-sf-t8T"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mWc-V1-p9h" secondAttribute="bottom" constant="8" id="A3A-7Y-yM0"/>
+                                        <constraint firstItem="76x-W1-R2z" firstAttribute="leading" secondItem="w0r-SJ-RVy" secondAttribute="leadingMargin" constant="8" id="JHw-3b-L1V"/>
+                                        <constraint firstItem="76x-W1-R2z" firstAttribute="top" secondItem="w0r-SJ-RVy" secondAttribute="topMargin" constant="8" id="ZfT-fg-kc1"/>
+                                        <constraint firstItem="mWc-V1-p9h" firstAttribute="top" secondItem="76x-W1-R2z" secondAttribute="bottom" constant="8" id="jq7-g7-8fZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="76x-W1-R2z" secondAttribute="trailing" constant="8" id="khz-4I-X6h"/>
+                                        <constraint firstItem="mWc-V1-p9h" firstAttribute="leading" secondItem="w0r-SJ-RVy" secondAttribute="leadingMargin" constant="8" id="tEf-cB-NiK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bagGenderLabel" destination="gy0-o4-pJ9" id="vEv-RJ-Qi0"/>
+                                    <outlet property="bagNameLabel" destination="c1E-rJ-CHE" id="C9R-9U-ZEd"/>
+                                    <outlet property="bagPriceLabel" destination="3bu-4c-rSQ" id="FeH-E8-vS2"/>
+                                    <outlet property="originLabel" destination="rY3-es-SSH" id="eS8-6Q-7l8"/>
+                                    <outlet property="seasonLabel" destination="rXh-lh-GtZ" id="9lt-wU-miw"/>
+                                    <segue destination="2rB-ll-2ft" kind="show" identifier="toDetailVC" id="Ja9-HR-hIq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PAL-9a-Ehk" id="Ssr-0i-ZLd"/>
+                            <outlet property="delegate" destination="PAL-9a-Ehk" id="39s-1I-3rt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="R80-Hd-UzP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="x1j-n6-qVp">
+                            <connections>
+                                <segue destination="2rB-ll-2ft" kind="show" id="RZW-1x-Zzf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaE-AM-8bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078.6259541984732" y="-61.267605633802823"/>
+        </scene>
+        <!--BagDetail-->
+        <scene sceneID="ekQ-7d-5e0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BagDetail" id="2rB-ll-2ft" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ycH-Ze-b32"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeG-pv-VMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.5190839694656" y="-61.267605633802823"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ja9-HR-hIq"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -36,6 +36,20 @@ class BagListTableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // what editing is the user trying to do?
+        
+        if editingStyle == .delete {
+            // remove the object from FB
+//            let bag = viewModel.bagsSourceOfTruth?[indexPath.row]
+//            viewModel.delete(bag: bag!)
+            viewModel.delete(indexPath: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // IIDOO
         guard let destination = segue.destination as? BagDetailViewController else {return}

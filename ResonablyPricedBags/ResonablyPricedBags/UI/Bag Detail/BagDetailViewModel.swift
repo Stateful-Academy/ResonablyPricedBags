@@ -81,7 +81,7 @@ class BagDetailViewModel {
         let uploadMetadata = StorageMetadata()
         uploadMetadata.contentType = "image/jpeg"
         /// Storage Console ^^
-       
+        
         storageRef.child(Constants.Images.imagePath).child(docID).putData(imageData, metadata: uploadMetadata) { result in
             switch result {
             case .success(let metaData):
@@ -107,10 +107,31 @@ class BagDetailViewModel {
                 print(failure.localizedDescription)
             }
         }
+    } // Fetch Image
+    
+    func updateBag(newName: String, newPrice: Double, newOrigin: String, newSeason: String, newGender: String) {
+        guard let bagToUpdate = self.bag else {return}
+        
+        let updatedBag = Bag(id: bagToUpdate.id, name: newName, price: newPrice, season: newSeason, originLocation: newOrigin, gender: newGender, collectionType: Constants.Bags.bagsCollectionPath,size: bagToUpdate.size, colors: bagToUpdate.colors)// nil coalecing
+        
+        update(bag: updatedBag)
     }
     
+    func update(bag: Bag) {
+        if let documentID = bag.id {
+            let ref = Firestore.firestore()
+            let docref = ref.collection(Constants.Bags.bagsCollectionPath).document(documentID)
+            
+            do {
+                try docref.setData(from: bag)
+            } catch {
+                print(error)
+                #warning("Bruh. Handle your stupid errors. nerd.")
+            }
+        }
+    }
     
-    
+   
     
     
 } // End of the class

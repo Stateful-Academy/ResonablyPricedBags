@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bag Detail View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BagDetailViewController" customModule="ResonablyPricedBags" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-vB-OQH">
+                                <rect key="frame" x="10" y="20" width="373" height="252"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Bag name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMP-kX-t2U">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="W3f-cl-4Wo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Bag Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-XX-91n">
+                                        <rect key="frame" x="0.0" y="52" width="373" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Bag Season" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-Y3-mpu">
+                                        <rect key="frame" x="0.0" y="104" width="373" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Bag Origin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJZ-w9-bc8">
+                                        <rect key="frame" x="0.0" y="156" width="373" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Bag Gender Style" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCE-lc-CQw">
+                                        <rect key="frame" x="0.0" y="208" width="373" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-xg-DCZ">
+                                <rect key="frame" x="20" y="762" width="353" height="60"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Bag"/>
+                                <connections>
+                                    <action selector="addBagTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2z-6L-jUn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stateful" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-va-MC2">
+                                <rect key="frame" x="20" y="292" width="353" height="450"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iPG-xg-DCZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0lQ-tu-ETg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEc-va-MC2" secondAttribute="trailing" constant="20" id="40n-Hj-lej"/>
+                            <constraint firstItem="2aK-vB-OQH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5e0-WM-Cmc"/>
+                            <constraint firstItem="bEc-va-MC2" firstAttribute="top" secondItem="2aK-vB-OQH" secondAttribute="bottom" constant="20" id="9A0-PE-vwW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iPG-xg-DCZ" secondAttribute="trailing" constant="20" id="JsX-Q7-oaQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iPG-xg-DCZ" secondAttribute="bottom" constant="20" id="Md7-VK-U4x"/>
+                            <constraint firstItem="iPG-xg-DCZ" firstAttribute="top" secondItem="bEc-va-MC2" secondAttribute="bottom" constant="20" id="iEb-Hu-Aav"/>
+                            <constraint firstItem="2aK-vB-OQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iTB-po-a8s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2aK-vB-OQH" secondAttribute="trailing" constant="10" id="lZG-wc-kAV"/>
+                            <constraint firstItem="bEc-va-MC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mGX-rB-uqZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vqj-Mt-2bo"/>
+                    <connections>
+                        <outlet property="bagDisplayImageVIew" destination="bEc-va-MC2" id="WJt-qI-aSA"/>
+                        <outlet property="bagGenderTextField" destination="bCE-lc-CQw" id="EZB-wj-ENP"/>
+                        <outlet property="bagNameTextField" destination="nMP-kX-t2U" id="XKa-yu-0iA"/>
+                        <outlet property="bagOriginTextField" destination="XJZ-w9-bc8" id="mto-0K-MLs"/>
+                        <outlet property="bagPriceTextField" destination="ltX-XX-91n" id="OFo-5i-gB2"/>
+                        <outlet property="bagSeasonTextField" destination="2Kb-Y3-mpu" id="TRZ-7P-tSn"/>
+                        <outlet property="saveBagButton" destination="iPG-xg-DCZ" id="XdK-R9-87u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.5190839694656" y="-61.267605633802823"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stateful" width="800" height="450"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

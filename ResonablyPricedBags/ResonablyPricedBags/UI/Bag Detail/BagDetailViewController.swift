@@ -62,20 +62,27 @@ class BagDetailViewController: UIViewController {
         
         // Reading
         guard let name = bagNameTextField.text,
-        let price = bagPriceTextField.text,
-        let season = bagSeasonTextField.text,
-        let origin = bagOriginTextField.text,
-        let gender = bagGenderTextField.text,
-        let image = bagDisplayImageVIew.image else {return}
+              let price = bagPriceTextField.text,
+              let season = bagSeasonTextField.text,
+              let origin = bagOriginTextField.text,
+              let gender = bagGenderTextField.text,
+              let image = bagDisplayImageVIew.image else {return}
         // Nil-Coalecing to unwrap the double
         let priceAsDouble = Double(price) ?? 0.0
         // Display
-        viewModel.create(name: name, price: priceAsDouble, season: season, origin: origin, gender: gender) { result in
-            switch result {
-            case .success(let docId):
-                self.viewModel.saveImage(with: image, to: docId)
-            case .failure(let failure):
-                print(failure.errorDescription!)
+        
+        if viewModel.bag != nil {
+            // if its not nil
+            viewModel.updateBag(newName: name, newPrice: priceAsDouble, newOrigin: origin, newSeason: season, newGender: gender)
+            viewModel.saveImage(with: image, to: (viewModel.bag?.id)!)
+        } else if viewModel.bag == nil {
+            viewModel.create(name: name, price: priceAsDouble, season: season, origin: origin, gender: gender) { result in
+                switch result {
+                case .success(let docId):
+                    self.viewModel.saveImage(with: image, to: docId)
+                case .failure(let failure):
+                    print(failure.errorDescription!)
+                }
             }
         }
         navigationController?.popViewController(animated: true)

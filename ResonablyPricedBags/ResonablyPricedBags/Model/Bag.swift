@@ -29,6 +29,7 @@ struct Bag: Codable {
 //}
 
 struct Size: Codable {
+    @DocumentID var id: String? // property Wrappe
     var small: String
     var medium: String
     var large: String
